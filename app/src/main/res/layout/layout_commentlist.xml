@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.datacomo.mc.spider.android.view.KeyboardListenRelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/rlayout_keyboardlisten"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical" >
+
+    <com.datacomo.mc.spider.android.view.RefreshListView
+        android:id="@+id/layout_commentlist_lv_commentlist"
+        style="@style/listviewStyle"
+        android:layout_weight="1"
+        android:background="@color/transparent"
+        android:fadingEdge="none"
+        android:fastScrollEnabled="true" />
+
+    <LinearLayout
+        android:id="@+id/llayout_commentbox"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:orientation="vertical"
+        android:visibility="gone" >
+
+        <include layout="@layout/form_comment" />
+
+        <com.datacomo.mc.spider.android.view.FacesView
+            android:id="@+id/facesview"
+            android:layout_width="fill_parent"
+            android:layout_height="@dimen/face_heigh"
+            android:visibility="gone" />
+    </LinearLayout>
+
+</com.datacomo.mc.spider.android.view.KeyboardListenRelativeLayout>

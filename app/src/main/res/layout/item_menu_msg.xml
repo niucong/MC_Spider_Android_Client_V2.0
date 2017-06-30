@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="64dp"
+    android:layout_height="wrap_content" >
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" >
+
+        <ImageView
+            android:id="@+id/item_menu_msg_name"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:padding="5dp"
+			android:scaleType="centerInside"/>
+
+        <TextView
+            android:id="@+id/item_menu_msg_num"
+            android:layout_width="11dp"
+            android:layout_height="11dp"
+            android:layout_alignRight="@+id/item_menu_msg_name"
+            android:layout_marginRight="-3dp"
+            android:layout_marginTop="-2dp"
+            android:background="@drawable/new_msg"
+            android:textColor="@color/white"
+            android:textSize="10dp"
+            android:visibility="gone" />
+    </RelativeLayout>
+
+</LinearLayout>

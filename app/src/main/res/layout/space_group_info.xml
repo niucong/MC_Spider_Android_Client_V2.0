@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="#ffffff" >
+
+    <ImageView
+        android:id="@+id/img_poster"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/green"
+        android:scaleType="centerCrop" />
+
+    <ImageView
+        android:id="@+id/img_header"
+        android:layout_width="96dp"
+        android:layout_height="95dp"
+        android:layout_below="@id/img_poster"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="-70dp"
+        android:background="@color/white"
+        android:clickable="false"
+        android:paddingLeft="2dp"
+        android:paddingTop="3dp" />
+
+    <ImageView
+        android:id="@+id/img_header_blank"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_below="@id/img_poster"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="-70dp"
+        android:background="@drawable/blank_head"
+        android:clickable="false" />
+
+    <ImageView
+        android:id="@+id/img_camera"
+        android:layout_width="25dp"
+        android:layout_height="25dp"
+        android:layout_alignBottom="@id/img_header"
+        android:layout_alignRight="@id/img_header"
+        android:layout_margin="3dp"
+        android:src="@drawable/send_img_bg"
+        android:visibility="gone" />
+
+    <TextView
+        android:id="@+id/name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@id/img_header_blank"
+        android:layout_marginLeft="10dp"
+        android:layout_toRightOf="@id/img_header_blank"
+        android:textColor="#1a1a1a"
+        android:textSize="19dp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/money"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@id/img_header_blank"
+        android:layout_alignParentRight="true"
+        android:paddingRight="10dp"
+        android:textColor="#797979"
+        android:textSize="17dp"
+        android:visibility="gone" />
+
+    <TextView
+        android:id="@+id/money_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@id/img_header_blank"
+        android:layout_marginLeft="20dp"
+        android:layout_toLeftOf="@id/money"
+        android:drawableLeft="@drawable/icon_money"
+        android:text=" 圈币 "
+        android:textColor="#1a1a1a"
+        android:textSize="16dp"
+        android:textStyle="bold"
+        android:visibility="gone" />
+
+    <TextView
+        android:id="@+id/mood"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/name"
+        android:layout_marginLeft="15dp"
+        android:paddingBottom="10dp"
+        android:paddingRight="10dp"
+        android:paddingTop="10dp"
+        android:textColor="#4d4c4c"
+        android:textSize="15dp" />
+
+    <LinearLayout
+        android:id="@+id/loading"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/mood"
+        android:gravity="center"
+        android:paddingBottom="10dp"
+        android:paddingTop="10dp"
+        android:visibility="gone" >
+
+        <ProgressBar
+            android:id="@+id/progress"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            style="?indeterminateProgressStyle" />
+
+        <TextView
+            android:id="@+id/text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="8dp"
+            android:text="正在加载中…"
+            android:textColor="@color/green"
+            android:textSize="13dp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/operate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@id/img_poster"
+        android:layout_alignParentRight="true"
+        android:layout_marginBottom="50dp"
+        android:layout_marginRight="-5dp"
+        android:background="@drawable/round_left_black"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:id="@+id/invite"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:padding="5dp"
+            android:text="+圈人  "
+            android:textColor="@color/white"
+            android:textSize="14dp" />
+
+        <View
+            android:layout_width="1.5dp"
+            android:layout_height="match_parent"
+            android:background="@drawable/back_line" />
+
+        <TextView
+            android:id="@+id/quu_chat"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:padding="5dp"
+            android:text=" 进入圈聊"
+            android:textColor="@color/white"
+            android:textSize="14dp" />
+    </LinearLayout>
+    
+    <TextView
+        android:id="@+id/chat_num"
+        android:layout_width="wrap_content"
+        android:layout_height="15dp"
+        android:layout_alignBottom="@id/img_poster"
+        android:layout_alignParentRight="true"
+        android:layout_marginBottom="55dp"
+        android:layout_marginRight="-5dp"
+        android:background="@drawable/bg_num"
+        android:gravity="center"
+        android:minWidth="15dp"
+        android:textColor="@color/white"
+        android:textSize="10dp" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/back_line" />
+
+</RelativeLayout>

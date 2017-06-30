@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@drawable/bg_main_white"
+    android:orientation="vertical" >
+
+    <GridView
+        android:id="@+id/layout_imgchoose_gv_choose"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:cacheColorHint="@color/transparent"
+        android:listSelector="@color/transparent"
+        android:numColumns="4"
+        android:stretchMode="none" >
+    </GridView>
+
+    <include layout="@layout/form_choosed" />
+
+</LinearLayout>

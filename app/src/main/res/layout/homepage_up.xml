@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:id="@+id/relativeLayout"
+        android:layout_width="match_parent"
+        android:layout_height="250dp" >
+
+        <ImageView
+            android:id="@+id/home_skin"
+            android:layout_width="match_parent"
+            android:layout_height="250dp"
+            android:scaleType="fitXY"
+            android:src="@drawable/bg_translucent" />
+
+        <LinearLayout
+            android:id="@+id/home_up"
+            android:layout_width="match_parent"
+            android:layout_height="250dp"
+            android:orientation="vertical" >
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="6.6dp"
+                android:layout_marginTop="48dp"
+                android:orientation="horizontal" >
+
+                <RelativeLayout
+                    android:id="@+id/home_head_pic"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" >
+
+                    <ImageView
+                        android:id="@+id/home_head"
+                        android:layout_width="96dp"
+                        android:layout_height="95dp"
+                        android:background="@color/white"
+                        android:paddingLeft="2dp"
+                        android:paddingTop="3dp" />
+
+                    <ImageView
+                        android:id="@+id/img_header_blank"
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
+                        android:background="@drawable/blank_head"
+                        android:clickable="false" />
+                </RelativeLayout>
+
+                <LinearLayout
+                    android:id="@+id/linearLayout6"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical" >
+
+                    <LinearLayout
+                        android:id="@+id/linearLayout5"
+                        android:layout_width="fill_parent"
+                        android:layout_height="65dp"
+                        android:layout_marginRight="2dp"
+                        android:layout_marginTop="2dp"
+                        android:background="@drawable/home_box"
+                        android:paddingBottom="8dp"
+                        android:paddingLeft="13dp"
+                        android:paddingRight="13dp"
+                        android:paddingTop="8dp" >
+
+                        <TextView
+                            android:id="@+id/home_feelword_tv"
+                            android:layout_width="fill_parent"
+                            android:layout_height="fill_parent"
+                            android:background="@null"
+                            android:scrollbars="vertical"
+                            android:singleLine="false"
+                            android:textColor="@color/white"
+                            android:textSize="13dp"
+                            android:visibility="visible" />
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/linearLayout2"
+                android:layout_width="310dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="2dp"
+                android:orientation="horizontal" >
+
+                <Button
+                    android:id="@+id/home_button"
+                    android:layout_width="80dp"
+                    android:layout_height="25dp"
+                    android:background="@drawable/homepage_btn"
+                    android:singleLine="true"
+                    android:textColor="@color/black"
+                    android:textSize="16dp"
+                    android:visibility="gone" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/home_contact_linearlayout"
+                android:layout_width="310dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="2dp"
+                android:orientation="horizontal" >
+
+                <Button
+                    android:id="@+id/home_contact_button"
+                    android:layout_width="80dp"
+                    android:layout_height="25dp"
+                    android:background="@drawable/homepage_btn"
+                    android:text="联系一下"
+                    android:textColor="@color/black"
+                    android:textSize="16dp"
+                    android:visibility="gone" />
+
+                <LinearLayout
+                    android:id="@+id/home_contact"
+                    android:layout_width="200dp"
+                    android:layout_height="40dp"
+                    android:layout_marginLeft="8dp"
+                    android:background="@drawable/home_cbg"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:visibility="gone" >
+
+                    <Button
+                        android:id="@+id/btn_phone"
+                        android:layout_width="40dp"
+                        android:layout_height="25dp"
+                        android:layout_marginLeft="7dp"
+                        android:background="@drawable/homepage_t_btn"
+                        android:text="拨打"
+                        android:textSize="10dp" />
+
+                    <Button
+                        android:id="@+id/btn_secret"
+                        android:layout_width="40dp"
+                        android:layout_height="25dp"
+                        android:layout_marginLeft="7dp"
+                        android:background="@drawable/homepage_t_btn"
+                        android:text="发私信"
+                        android:textSize="10dp" />
+
+                    <Button
+                        android:id="@+id/btn_message"
+                        android:layout_width="40dp"
+                        android:layout_height="25dp"
+                        android:layout_marginLeft="7dp"
+                        android:background="@drawable/homepage_t_btn"
+                        android:text="留言"
+                        android:textSize="10dp" />
+
+                    <Button
+                        android:id="@+id/btn_hellow"
+                        android:layout_width="40dp"
+                        android:layout_height="25dp"
+                        android:layout_marginLeft="7dp"
+                        android:background="@drawable/homepage_t_btn"
+                        android:text="打招呼"
+                        android:textSize="10dp" />
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </RelativeLayout>
+
+</LinearLayout>

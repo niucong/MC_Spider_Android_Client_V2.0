@@ -1,0 +1,231 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="AppTheme" parent="Theme.Sherlock.Light.NoActionBar">
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:windowNoTitle">true</item>
+    </style>
+
+    <style name="MyAppTheme" parent="Theme.Sherlock.Light.DarkActionBar">
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="actionBarStyle">@style/Theme.MyTheme.ActionBar</item>
+        <item name="android:dropDownListViewStyle">@style/MyDropDownListView</item>
+        <item name="homeAsUpIndicator">@drawable/action_back</item>
+    </style>
+
+    <!-- 下拉导航外部按钮的样式 ad_spinner_background_holo_light -->
+    <style name="MyDropDownNav" parent="android:style/Widget.Holo.Light.Spinner">
+        <item name="android:background">@drawable/action_spinner</item>
+        <item name="android:popupBackground">@drawable/bg_midmenu</item>
+        <item name="android:dropDownSelector">#ffffff</item>
+    </style>
+
+    <!-- 下拉导航内部按钮的样式 -->
+    <style name="MyDropDownListView" parent="android:style/Widget.Holo.ListView.DropDown">
+        <item name="android:listSelector">#00000000</item>
+    </style>
+
+    <style name="DialogTheme" parent="DialogTheme">
+        <item name="android:windowNoTitle">true</item>
+    </style>
+
+    <style name="Theme.MyTheme.ActionBar" parent="Widget.Sherlock.ActionBar">
+        <item name="android:windowBackground">@drawable/bg_translucent</item>
+        <item name="background">#00000000</item>
+        <item name="titleTextStyle">@style/Theme.MyTheme.ActionBar.TitleTextStyle</item>
+    </style>
+
+    <style name="Theme.MyTheme.ActionBar.TitleTextStyle" parent="TextAppearance.Sherlock.Widget.ActionBar.Title">
+        <item name="android:textColor">#ffffff</item>
+        <item name="android:singleLine">true</item>
+        <item name="android:ellipsize">marquee</item>
+        <item name="android:marqueeRepeatLimit">marquee_forever</item>
+        <item name="android:focusable">true</item>
+        <item name="android:focusableInTouchMode">true</item>
+    </style>
+
+    <!-- 圈博详情样式1 -->
+    <style name="circleblogdetails_txtStyle1">
+        <item name="android:textSize">16.0dp</item>
+        <item name="android:textColor">#000000</item>
+    </style>
+    <!-- 圈博详情样式2 -->
+    <style name="circleblogdetails_txtStyle2">
+        <item name="android:textSize">12.0dp</item>
+        <item name="android:textColor">#666666</item>
+    </style>
+    <!-- 圈博详情样式3 -->
+    <style name="circleblogdetails_txtStyle3">
+        <item name="android:textSize">13.3dp</item>
+        <item name="android:textColor">#666666</item>
+    </style>
+    <!-- 圈博详情样式4 -->
+    <style name="circleblogdetails_txtStyle4">
+        <item name="android:textSize">12.0dp</item>
+        <item name="android:textColor">#666666</item>
+    </style>
+    <!-- 圈博详情样式5 -->
+    <style name="circleblogdetails_txtStyle5">
+        <item name="android:textSize">13.3dp</item>
+        <item name="android:textColor">#000000</item>
+    </style>
+    <!-- 圈博详情样式6 -->
+    <style name="circleblogdetails_txtStyle6">
+        <item name="android:textSize">13.3dp</item>
+        <item name="android:textColor">#C8CECA</item>
+    </style>
+    <!-- 圈博详情样式7 -->
+    <style name="circleblogdetails_txtStyle7">
+        <item name="android:textSize">13.3dp</item>
+        <item name="android:textColor">#FFFFFF</item>
+    </style>
+    <!-- 圈博详情样式8 -->
+    <style name="circleblogdetails_txtStyle8">
+        <item name="android:textSize">10.6dp</item>
+        <item name="android:textColor">#C8CECA</item>
+    </style>
+
+    <!-- 圈博详情小头像样式 -->
+    <style name="circleblogdetails_smallheadStyle" parent="smallheadStyle">
+        <item name="android:visibility">invisible</item>
+    </style>
+
+    <!-- 小头像样式 -->
+    <style name="smallheadStyle">
+        <item name="android:layout_width">28.0dp</item>
+        <item name="android:layout_height">28.0dp</item>
+        <item name="android:src">@drawable/icon_head_loading</item>
+    </style>
+
+    <!-- 大头像样式 -->
+    <style name="bigheadStyle">
+        <item name="android:layout_width">40.0dp</item>
+        <item name="android:layout_height">40.0dp</item>
+    </style>
+
+    <!-- 列表样式 -->
+    <style name="listviewStyle">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:scrollbars">none</item>
+    </style>
+
+    <!-- 发布发布信息样式 -->
+    <style name="release_information_releaseinfo">
+        <item name="android:textSize">13.3dp</item>
+        <item name="android:textColor">#000000</item>
+    </style>
+    <!-- 发布发布按钮样式 -->
+    <style name="release_information_releasebtn">
+        <item name="android:textSize">13.3dp</item>
+        <item name="android:textColor">#666666</item>
+    </style>
+
+    <style name="auto_link">
+        <item name="android:textSize">16dp</item>
+        <item name="android:textColor">@color/auto_link</item>
+    </style>
+
+    <style name="text_prompt">
+        <item name="android:textSize">16dp</item>
+        <item name="android:textColor">@color/graytext</item>
+    </style>
+
+    <style name="currency_prompt">
+        <item name="android:textSize">16dp</item>
+        <item name="android:textColor">@color/red</item>
+    </style>
+
+    <style name="Theme.Translucent" parent="android:style/Theme.Translucent">
+        <item name="android:windowBackground">@color/translucent</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:colorForeground">#00000000</item>
+    </style>
+
+    <style name="myact">
+        <item name="@android:activityCloseExitAnimation">@anim/push_down_out</item>
+    </style>
+    <!-- Pop样式 -->
+    <style name="pop_style">
+        <item name="android:windowEnterAnimation">@anim/pop_show</item>
+        <!-- 指定显示的动画xml -->
+        <item name="android:windowExitAnimation">@anim/pop_hide</item>
+        <!-- 指定消失的动画xml -->
+    </style>
+
+    <!-- Pop样式2 -->
+    <style name="pop_style2">
+        <item name="android:windowEnterAnimation">@anim/faces_in_from_down</item>
+        <!-- 指定显示的动画xml -->
+        <item name="android:windowExitAnimation">@anim/faces_out_to_down</item>
+        <!-- 指定消失的动画xml -->
+    </style>
+
+    <style name="popwindow_anim_style">
+        <item name="android:windowEnterAnimation">@anim/popshow_scale</item>
+        <!-- 指定显示的动画xml -->
+        <item name="android:windowExitAnimation">@anim/pophide_dark</item>
+        <!-- 指定消失的动画xml -->
+    </style>
+
+    <style name="popwindow_anim_style2">
+        <item name="android:windowEnterAnimation">@anim/popshow_scale2</item>
+        <!-- 指定显示的动画xml -->
+        <item name="android:windowExitAnimation">@anim/pophide_dark</item>
+        <!-- 指定消失的动画xml -->
+    </style>
+
+    <style name="midmenu_ani">
+        <item name="android:windowEnterAnimation">@anim/push_rihgt_in</item>
+        <item name="android:windowExitAnimation">@anim/push_left_out</item>
+    </style>
+
+    <style name="menu_ani">
+        <item name="android:windowExitAnimation">@anim/menu_up_out</item>
+    </style>
+
+    <style name="midmenu_ani_bottom">
+        <item name="android:windowEnterAnimation">@anim/push_up_in</item>
+        <item name="android:windowExitAnimation">@anim/push_down_out</item>
+    </style>
+
+    <style name="scale_menu_from_right_top">
+        <item name="android:windowEnterAnimation">@anim/scale_in_top</item>
+    </style>
+
+    <style name="scale_menu_from_right_bottom">
+        <item name="android:windowEnterAnimation">@anim/scale_in_bottom</item>
+    </style>
+
+    <style name="list_item_date">
+        <item name="android:textSize">12dp</item>
+        <item name="android:textColor">@color/gray</item>
+        <item name="android:duplicateParentState">true</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginLeft">4.0dip</item>
+        <item name="android:layout_marginTop">3.0dip</item>
+    </style>
+
+    <style name="list_item_from">
+        <item name="android:textSize">15dp</item>
+        <item name="android:textColor">@color/black</item>
+        <item name="android:ellipsize">end</item>
+        <item name="android:duplicateParentState">true</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:singleLine">true</item>
+    </style>
+
+    <style name="mail_list_attach">
+        <item name="android:background">@drawable/note_link</item>
+        <item name="android:visibility">invisible</item>
+        <item name="android:duplicateParentState">true</item>
+        <item name="android:layout_width">15dp</item>
+        <item name="android:layout_height">15dp</item>
+        <item name="android:layout_marginTop">1.0dip</item>
+        <item name="android:layout_marginRight">2.0dip</item>
+        <item name="android:layout_alignParentTop">true</item>
+    </style>
+
+</resources>

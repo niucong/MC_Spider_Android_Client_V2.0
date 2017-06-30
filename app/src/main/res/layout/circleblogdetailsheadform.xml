@@ -1,0 +1,471 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:id="@+id/circleblogdetails_head"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:paddingBottom="10dp"
+        android:paddingLeft="10dp"
+        android:paddingTop="10dp" >
+
+        <include
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            layout="@layout/img_head" />
+
+        <LinearLayout
+            android:id="@+id/linearLayout3"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_weight="1"
+            android:gravity="center_vertical"
+            android:orientation="vertical" >
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:id="@+id/circleblogdetails_name"
+                    style="@style/circleblogdetails_txtStyle1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:singleLine="true" />
+
+                <TextView
+                    android:id="@+id/circleblogdetails_group"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:ellipsize="end"
+                    android:singleLine="true"
+                    android:textColor="@color/auto_link"
+                    android:textSize="16dp" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/circleblogdetails_baseinfo"
+                style="@style/circleblogdetails_txtStyle2"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/circleblogdetails_imageview"
+            android:layout_width="36dp"
+            android:layout_height="36dp"
+            android:layout_marginRight="2dp"
+            android:src="@drawable/arrow_rights" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical" >
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_weight="1"
+            android:orientation="vertical" >
+
+            <TextView
+                android:id="@+id/circleblogdetailsheadform_blogtitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:textColor="@color/black"
+                android:textSize="20dp"
+                android:visibility="gone" />
+
+            <WebView
+                android:id="@+id/circleblogdetailsheadform_bloginfo"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="2dp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:visibility="gone" />
+
+            <LinearLayout
+                android:id="@+id/circleblogdetailsheadform_addimglayout"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:orientation="vertical"
+                android:visibility="gone" />
+
+            <LinearLayout
+                android:id="@+id/circleblogdetailsheadform_addfilelayout"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:orientation="vertical"
+                android:visibility="gone" />
+
+            <ViewStub
+                android:id="@+id/circleblogdetailsheadform_filelist"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout="@+layout/form_filelist" />
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/ImageView02"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:src="@drawable/halvingline"
+            android:visibility="gone" />
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:orientation="horizontal" >
+
+            <LinearLayout
+                android:id="@+id/circleblogdetailsheadform_visitor_layout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical" >
+
+                <TextView
+                    android:id="@+id/circleblogdetailsheadform_visitor_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="浏览(0)"
+                    android:textColor="@color/quubo_1" />
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="2dp"
+                    android:orientation="horizontal" >
+
+                    <View
+                        android:layout_width="wrap_content"
+                        android:layout_height="8dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/quubo_2" />
+
+                    <View
+                        android:id="@+id/circleblogdetailsheadform_visitor_bg"
+                        android:layout_width="12dp"
+                        android:layout_height="8dp"
+                        android:background="@drawable/quubo_1" />
+
+                    <View
+                        android:layout_width="wrap_content"
+                        android:layout_height="8dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/quubo_2" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/circleblogdetailsheadform_praise_layout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical" >
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal" >
+
+                    <View
+                        android:layout_width="2dp"
+                        android:layout_height="fill_parent"
+                        android:layout_margin="3dp"
+                        android:background="@drawable/menu_ver" />
+
+                    <TextView
+                        android:id="@+id/circleblogdetailsheadform_praise_tv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="赞(0)"
+                        android:textColor="@color/quubo_2" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="2dp"
+                    android:orientation="horizontal" >
+
+                    <View
+                        android:layout_width="wrap_content"
+                        android:layout_height="8dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/quubo_2" />
+
+                    <View
+                        android:id="@+id/circleblogdetailsheadform_praise_bg"
+                        android:layout_width="12dp"
+                        android:layout_height="8dp"
+                        android:background="@drawable/quubo_2" />
+
+                    <View
+                        android:layout_width="wrap_content"
+                        android:layout_height="8dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/quubo_2" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="" />
+
+                <View
+                    android:layout_width="fill_parent"
+                    android:layout_height="8dp"
+                    android:layout_marginTop="2dp"
+                    android:background="@drawable/quubo_2" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/circleblogdetailsheadform_praise"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:layout_marginLeft="5dp"
+            android:layout_weight="1"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:visibility="gone" >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginLeft="5dp"
+                android:layout_weight="2.7"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:visibility="gone" >
+
+                <TextView
+                    android:id="@+id/circleblogdetailsheadform_praisenum"
+                    style="@style/circleblogdetails_txtStyle4"
+                    android:layout_width="90dp"
+                    android:layout_height="30dp"
+                    android:background="@drawable/circleblogdetails_memberlist_title"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp"
+                    android:singleLine="true"
+                    android:text="0人觉得赞" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1.5"
+                android:gravity="center_vertical" >
+
+                <ImageView
+                    android:id="@+id/circleblogdetailsheadform_praise_img1"
+                    style="@style/circleblogdetails_smallheadStyle"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="5dp"
+                    android:layout_weight="1" />
+
+                <ImageView
+                    android:id="@+id/circleblogdetailsheadform_praise_img2"
+                    style="@style/circleblogdetails_smallheadStyle"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="5dp"
+                    android:layout_weight="1" />
+
+                <ImageView
+                    android:id="@+id/circleblogdetailsheadform_praise_img3"
+                    style="@style/circleblogdetails_smallheadStyle"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="5dp"
+                    android:layout_weight="1" />
+
+                <ImageView
+                    android:id="@+id/circleblogdetailsheadform_praise_img4"
+                    style="@style/circleblogdetails_smallheadStyle"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="5dp"
+                    android:layout_weight="1" />
+
+                <ImageView
+                    android:id="@+id/circleblogdetailsheadform_praise_img5"
+                    style="@style/circleblogdetails_smallheadStyle"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="5dp"
+                    android:layout_weight="1" />
+
+                <ImageView
+                    android:id="@+id/circleblogdetailsheadform_praise_img6"
+                    style="@style/circleblogdetails_smallheadStyle"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="5dp"
+                    android:layout_weight="1" />
+
+                <ImageView
+                    android:id="@+id/circleblogdetailsheadform_praise_img7"
+                    style="@style/circleblogdetails_smallheadStyle"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="5dp"
+                    android:layout_weight="1" />
+            </LinearLayout>
+
+            <ImageView
+                android:id="@+id/imageview1"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="8"
+                android:padding="5dp"
+                android:src="@drawable/arrow_rights" />
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/ImageView01"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:src="@drawable/halvingline"
+            android:visibility="gone" />
+
+        <LinearLayout
+            android:id="@+id/circleblogdetailsheadform_visitor"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:layout_marginLeft="5dp"
+            android:layout_weight="1"
+            android:gravity="center_vertical"
+            android:orientation="horizontal" >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:layout_marginLeft="5dp"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:visibility="gone" >
+
+                <TextView
+                    android:id="@+id/circleblogdetailsheadform_visitornum"
+                    style="@style/circleblogdetails_txtStyle4"
+                    android:layout_width="90dp"
+                    android:layout_height="30dp"
+                    android:background="@drawable/circleblogdetails_memberlist_title"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp"
+                    android:singleLine="true"
+                    android:text=" 0人看过" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1.5"
+                android:gravity="center_vertical" >
+
+                <ImageView
+                    android:id="@+id/circleblogdetailsheadform_visitor_img1"
+                    style="@style/circleblogdetails_smallheadStyle"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="5dp"
+                    android:layout_weight="1" />
+
+                <ImageView
+                    android:id="@+id/circleblogdetailsheadform_visitor_img2"
+                    style="@style/circleblogdetails_smallheadStyle"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="5dp"
+                    android:layout_weight="1" />
+
+                <ImageView
+                    android:id="@+id/circleblogdetailsheadform_visitor_img3"
+                    style="@style/circleblogdetails_smallheadStyle"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="5dp"
+                    android:layout_weight="1" />
+
+                <ImageView
+                    android:id="@+id/circleblogdetailsheadform_visitor_img4"
+                    style="@style/circleblogdetails_smallheadStyle"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="5dp"
+                    android:layout_weight="1" />
+
+                <ImageView
+                    android:id="@+id/circleblogdetailsheadform_visitor_img5"
+                    style="@style/circleblogdetails_smallheadStyle"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="5dp"
+                    android:layout_weight="1" />
+
+                <ImageView
+                    android:id="@+id/circleblogdetailsheadform_visitor_img6"
+                    style="@style/circleblogdetails_smallheadStyle"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="5dp"
+                    android:layout_weight="1" />
+
+                <ImageView
+                    android:id="@+id/circleblogdetailsheadform_visitor_img7"
+                    style="@style/circleblogdetails_smallheadStyle"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="5dp"
+                    android:layout_weight="1" />
+            </LinearLayout>
+
+            <ImageView
+                android:id="@+id/imageview2"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="8"
+                android:padding="5dp"
+                android:src="@drawable/arrow_rights" />
+        </LinearLayout>
+
+        <View
+            android:id="@+id/halvingline"
+            android:layout_width="fill_parent"
+            android:layout_height="2dp"
+            android:layout_marginTop="8dp"
+            android:background="@drawable/note_div" />
+    </LinearLayout>
+
+</LinearLayout>

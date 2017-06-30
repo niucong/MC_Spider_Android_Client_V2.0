@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:panel="http://schemas.android.com/apk/res/com.datacomo.mc.spider.android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@drawable/bg_main_white"
+    android:orientation="vertical" >
+
+    <com.datacomo.mc.spider.android.view.Panel
+        android:id="@+id/create_topic_panel"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        panel:content="@+id/create_topic_groupchooseds"
+        panel:handle="@+id/layout_create_topic_llayout_arrowbox"
+        panel:position="top" >
+
+        <com.datacomo.mc.spider.android.view.GroupChoosedsHorScrollView
+            android:id="@+id/create_topic_groupchooseds"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:background="#efefef"
+            android:scrollbars="none" />
+
+        <LinearLayout
+            android:id="@+id/layout_create_topic_llayout_arrowbox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#efefef"
+            android:orientation="vertical" >
+
+            <ImageView
+                android:id="@+id/layout_create_topic_img_arrow"
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:layout_gravity="center_horizontal"
+                android:padding="4dp"
+                android:src="@drawable/arrow_up_0" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#d6d6d6"
+                android:orientation="vertical" />
+        </LinearLayout>
+    </com.datacomo.mc.spider.android.view.Panel>
+
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:fadingEdge="none" >
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="0dp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:layout_marginTop="5dp"
+                android:layout_weight="1"
+                android:orientation="vertical" >
+
+                <EditText
+                    android:id="@+id/create_topic_title"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:background="#00000000"
+                    android:hint="标题（可不写）"
+                    android:maxLength="50"
+                    android:minHeight="17dp"
+                    android:padding="5dp"
+                    android:singleLine="true"
+                    android:textSize="16dp" />
+
+                <View
+                    android:layout_width="fill_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="5dp"
+                    android:background="#e2e2e2" />
+
+                <EditText
+                    android:id="@+id/create_topic_content"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:background="#00000000"
+                    android:gravity="top"
+                    android:hint="内容"
+                    android:minLines="4"
+                    android:padding="5dp"
+                    android:textColor="#1b1b1b"
+                    android:textSize="15dp" />
+            </LinearLayout>
+
+            <ViewStub
+                android:id="@+id/create_topic_vs_imagegrid"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:layout="@+layout/form_imagegrid" />
+
+            <ViewStub
+                android:id="@+id/create_topic_vs_filelist"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout="@+layout/form_filelist" />
+        </LinearLayout>
+    </ScrollView>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bar_gray_dark"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:padding="5dp" >
+
+        <ImageView
+            android:id="@+id/create_topic_location"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:layout_weight="1"
+            android:visibility="gone" />
+
+        <ImageView
+            android:id="@+id/create_topic_photo"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:layout_weight="1"
+            android:src="@drawable/send_img_bg" />
+
+        <ImageView
+            android:id="@+id/create_topic_file"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:layout_weight="1"
+            android:src="@drawable/send_file_bg" />
+
+        <ImageView
+            android:id="@+id/create_topic_at"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:layout_weight="1"
+            android:src="@drawable/send_at_bg"
+            android:visibility="gone" />
+
+        <ImageView
+            android:id="@+id/create_topic_face"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:layout_weight="1"
+            android:src="@drawable/icon_face" />
+    </LinearLayout>
+
+    <com.datacomo.mc.spider.android.view.FacesView
+        android:id="@+id/facesview"
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/face_heigh"
+        android:visibility="gone" />
+
+</LinearLayout>

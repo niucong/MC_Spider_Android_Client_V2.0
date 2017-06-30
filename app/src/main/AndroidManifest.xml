@@ -1,0 +1,623 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.datacomo.mc.spider.android" >
+
+    <supports-screens
+        android:anyDensity="true"
+        android:largeScreens="true"
+        android:normalScreens="false"
+        android:resizeable="true"
+        android:smallScreens="true" />
+
+    <uses-permission android:name="android.permission.GET_TASKS" />
+    <!-- 添加调用系统震动的权限 -->
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <!-- 联网权限 -->
+    <uses-permission android:name="android.permission.INTERNET" />
+    <!-- 添加写入存储卡的权限 -->
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <!-- 创建与删除系统文件的权限 -->
+    <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS" />
+    <!-- 拨打的权限 -->
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+    <!-- 判断网络状态的权限 -->
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <!-- 添加读取手机状态 -->
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <!-- 音频 -->
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+    <!-- 添加读写联系人的权限 -->
+    <uses-permission android:name="android.permission.READ_CONTACTS" />
+    <uses-permission android:name="android.permission.WRITE_CONTACTS" />
+    <!-- 定位 -->
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <!-- WIFI -->
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+    <uses-permission android:name="android.permission.READ_LOGS" />
+    <uses-permission android:name="android.permission.WRITE_SETTINGS" />
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
+    <uses-permission android:name="android.permission.RESTART_PACKAGES" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="com.android.launcher.permission.READ_SETTINGS" />
+    <uses-permission android:name="com.android.launcher.permission.INSTALL_SHORTCUT" />
+
+    <uses-feature android:name="android.hardware.camera" />
+    <uses-feature
+        android:name="android.hardware.camera.autofocus"
+        android:required="false" />
+
+    <application
+        android:name=".application.App"
+        android:icon="@drawable/icon"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme" >
+
+        <!-- .SpiderTouchApp -->
+        <activity
+            android:name=".SpiderTouchApp"
+            android:screenOrientation="portrait" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <!-- 登录.LoginActivity -->
+        <activity
+            android:name=".LoginActivity"
+            android:launchMode="singleInstance"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize" />
+        <!-- 重置密码——填手机号.RetrievePassWordActivity -->
+        <activity
+            android:name=".RetrievePassWordActivity"
+            android:launchMode="singleInstance"
+            android:screenOrientation="portrait"
+            android:theme="@style/MyAppTheme"
+            android:windowSoftInputMode="adjustResize" />
+        <!-- 重置密码——填验证码.VerificationActivity -->
+        <activity
+            android:name=".VerificationActivity"
+            android:launchMode="singleInstance"
+            android:screenOrientation="portrait"
+            android:theme="@style/MyAppTheme"
+            android:windowSoftInputMode="adjustResize" />
+
+        <!-- 注册.RegisterActivity -->
+        <activity
+            android:name=".RegisterActivity"
+            android:launchMode="singleInstance"
+            android:screenOrientation="portrait"
+            android:theme="@style/MyAppTheme"
+            android:windowSoftInputMode="adjustResize" />
+        <!-- 注册校验验证码.RegisterCheckActivity -->
+        <activity
+            android:name=".RegisterCheckActivity"
+            android:launchMode="singleInstance"
+            android:screenOrientation="portrait"
+            android:theme="@style/MyAppTheme"
+            android:windowSoftInputMode="adjustResize" />
+        <!-- 引导-改名.GuideNameActivity -->
+        <activity
+            android:name=".GuideNameActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/MyAppTheme"
+            android:windowSoftInputMode="adjustResize" />
+        <!-- 引导-上传头像.GuideHeadPhotoActivity -->
+        <activity
+            android:name=".GuideHeadPhotoActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/MyAppTheme" />
+        <!-- 引导-邀请朋友.GuideInviteActivity -->
+        <activity
+            android:name=".GuideInviteActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/MyAppTheme" />
+        <!-- 腾讯微博认证.TenCentOAuthActivity -->
+        <activity
+            android:name="com.datacomo.mc.spider.android.weibo.TenCentOAuthActivity"
+            android:launchMode="singleInstance"
+            android:screenOrientation="portrait"
+            android:theme="@style/MyAppTheme" />
+        <!-- 备份通讯录.BackupContactsActivity -->
+        <activity
+            android:name=".BackupContactsActivity"
+            android:launchMode="singleInstance"
+            android:screenOrientation="portrait"
+            android:theme="@style/MyAppTheme"
+            android:windowSoftInputMode="stateHidden" />
+        <!-- 恢复通讯录.BackupContactsReActivity -->
+        <activity
+            android:name=".BackupContactsReActivity"
+            android:launchMode="singleInstance"
+            android:screenOrientation="portrait"
+            android:theme="@style/MyAppTheme"
+            android:windowSoftInputMode="stateHidden" />
+        <!-- 消息界面.MsgActivity -->
+        <activity
+            android:name=".MsgActivity"
+            android:exported="true"
+            android:screenOrientation="portrait"
+            android:theme="@style/MyAppTheme"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+        <!-- 开放主页.OpenHomePage -->
+        <activity
+            android:name=".OpenHomePage"
+            android:screenOrientation="portrait"
+            android:theme="@style/MyAppTheme"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+        <!-- 邮件列表界面.MailListActivity -->
+        <activity
+            android:name=".MailListActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/MyAppTheme"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+        <!-- 邮件发送界面.MailCreateActivity -->
+        <activity
+            android:name=".MailCreateActivity"
+            android:configChanges="orientation|keyboardHidden|navigation"
+            android:screenOrientation="portrait"
+            android:theme="@style/MyAppTheme" />
+        <!-- 邮件列表界面.MailWithActivity -->
+        <activity
+            android:name=".MailWithActivity"
+            android:configChanges="orientation|keyboardHidden|navigation"
+            android:screenOrientation="portrait"
+            android:theme="@style/MyAppTheme"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+        <!-- 邮件详情.MailDetailsIndexActivity -->
+        <activity
+            android:name=".MailDetailsIndexActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/MyAppTheme"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+        <!-- 笔记界面.NoteActivity -->
+        <activity
+            android:name=".NoteActivity"
+            android:configChanges="orientation|keyboardHidden|navigation"
+            android:screenOrientation="portrait"
+            android:theme="@style/MyAppTheme"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+        <!-- 与某人笔记分享界面.CloudNoteWithActivity -->
+        <activity
+            android:name=".CloudNoteWithActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/MyAppTheme"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+        <!-- 查看笔记.NoteDetailsActivity -->
+        <activity
+            android:name=".NoteDetailsActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/MyAppTheme"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+        <!-- 笔记详情.NoteCloudDetailsActivity -->
+        <activity
+            android:name=".NoteCloudDetailsActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/MyAppTheme"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+        <!-- 写笔记界面.NoteCreteActivity -->
+        <activity
+            android:name=".NoteCreateActivity"
+            android:configChanges="orientation|keyboardHidden|navigation"
+            android:screenOrientation="portrait"
+            android:theme="@style/MyAppTheme" />
+        <!-- 云文件列表界面.CloudFileActivity -->
+        <activity
+            android:name=".CloudFileActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/MyAppTheme"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+        <!-- 与某人云文件交流列表界面.CloudFileActivity -->
+        <activity
+            android:name=".CloudFileWithActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/MyAppTheme"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+        <!-- 选择云文件界面.CloudFileChooseActivity -->
+        <activity
+            android:name=".CloudFileChooseActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/MyAppTheme"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+        <!-- 云文件详情界面.FileDetailActivity -->
+        <activity
+            android:name=".FileDetailActivity"
+            android:configChanges="orientation|keyboardHidden|navigation"
+            android:screenOrientation="portrait"
+            android:theme="@style/MyAppTheme"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+        <!-- 文件重新上传、下载.ReloadingActivity -->
+        <activity
+            android:name=".ReLoadingActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/DialogTheme" />
+        <!-- 朋友选择界面.FriendsChooserActivity -->
+        <activity
+            android:name=".FriendsChooserActivity"
+            android:configChanges="orientation|keyboardHidden|navigation"
+            android:screenOrientation="portrait"
+            android:theme="@style/MyAppTheme"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+        <!-- 圈子选择界面.GroupsChooserActivity -->
+        <activity
+            android:name=".GroupsChooserActivity"
+            android:configChanges="orientation|keyboardHidden|navigation"
+            android:screenOrientation="portrait"
+            android:theme="@style/MyAppTheme"
+            android:windowSoftInputMode="stateHidden|adjustPan" >
+            <intent-filter>
+                <action android:name="android.intent.action.SEND" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+
+                <data android:mimeType="*/*" />
+            </intent-filter>
+        </activity>
+        <!-- 图谱界面.CircleFamilyActivity -->
+        <activity
+            android:name=".CircleFamilyActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/MyAppTheme"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+        <!-- 添加朋友界面.FindFriendActivity -->
+        <activity
+            android:name=".FindFriendActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/MyAppTheme"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+        <!-- 添加朋友界面.FindGroupFriendActivity -->
+        <activity
+            android:name=".FindGroupFriendActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/MyAppTheme"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+        <!-- 搜索界面.SearchActivity -->
+        <activity
+            android:name=".SearchActivity"
+            android:launchMode="singleInstance"
+            android:screenOrientation="portrait"
+            android:theme="@style/MyAppTheme" />
+        <!-- 搜索界面.FindResult2Activity -->
+        <activity
+            android:name=".FindResult2Activity"
+            android:screenOrientation="portrait"
+            android:theme="@style/MyAppTheme"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+        <activity
+            android:name=".Find1Activity"
+            android:screenOrientation="portrait"
+            android:theme="@style/MyAppTheme"
+            android:windowSoftInputMode="adjustResize" />
+        <!-- 圈子列表.CirclesActivity -->
+        <activity
+            android:name=".CirclesActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/MyAppTheme"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+        <!-- 秘信对话.QChatActivity -->
+        <activity
+            android:name=".QChatActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/MyAppTheme"
+            android:windowSoftInputMode="stateHidden" />
+        <!-- 圈聊对话.QuuChatActivity -->
+        <activity
+            android:name=".QuuChatActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/MyAppTheme"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name=".InfoWallActivity"
+            android:configChanges="orientation|keyboardHidden|navigation"
+            android:exported="true"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:theme="@style/MyAppTheme"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+        <activity
+            android:name=".SettingActivity"
+            android:launchMode="singleTask"
+            android:theme="@style/MyAppTheme" />
+        <activity
+            android:name=".GroupCreateActivity"
+            android:configChanges="orientation|keyboardHidden|navigation"
+            android:screenOrientation="portrait"
+            android:theme="@style/MyAppTheme"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+        <activity
+            android:name=".SubGroupActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/MyAppTheme"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name=".SelectActivity"
+            android:configChanges="orientation|keyboardHidden|navigation"
+            android:screenOrientation="portrait"
+            android:theme="@style/MyAppTheme"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+        <activity
+            android:name=".InterGroupActivity"
+            android:configChanges="orientation|keyboardHidden|navigation"
+            android:screenOrientation="portrait"
+            android:theme="@style/MyAppTheme"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+        <activity
+            android:name=".HomePageActivity"
+            android:configChanges="orientation|keyboardHidden|navigation"
+            android:screenOrientation="portrait"
+            android:theme="@style/MyAppTheme" />
+        <activity
+            android:name=".HomeGpActivity"
+            android:configChanges="orientation|keyboardHidden|navigation"
+            android:screenOrientation="portrait"
+            android:theme="@style/MyAppTheme" />
+        <activity
+            android:name=".TopicActivity"
+            android:configChanges="orientation|keyboardHidden|navigation"
+            android:screenOrientation="portrait"
+            android:theme="@style/MyAppTheme" />
+        <!-- 个人地盘.HomePgActivity -->
+        <activity
+            android:name=".HomePgActivity"
+            android:configChanges="orientation|keyboardHidden|navigation"
+            android:screenOrientation="portrait"
+            android:theme="@style/MyAppTheme"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+        <!-- 圈子信息.CircleInformationActivity -->
+        <activity
+            android:name=".CircleInformationActivity"
+            android:configChanges="orientation|keyboardHidden|navigation"
+            android:screenOrientation="portrait"
+            android:theme="@style/MyAppTheme" />
+        <!-- 圈博详情.CircleBlogDetailsActivity -->
+        <activity
+            android:name=".CircleBlogDetailsActivity"
+            android:configChanges="orientation|keyboardHidden|navigation"
+            android:screenOrientation="portrait"
+            android:theme="@style/MyAppTheme"
+            android:windowSoftInputMode="stateHidden|adjustResize" />
+        <!-- 图片画廊.PhotoGalleryActivity -->
+        <activity
+            android:name=".PhotoGalleryActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize|stateHidden" />
+        <!-- 评论.CommentListActivity -->
+        <activity
+            android:name=".CommentListActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/MyAppTheme"
+            android:windowSoftInputMode="adjustResize|stateHidden" />
+        <!-- 成员列表.MemberListActivity -->
+        <activity
+            android:name=".MemberListActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/MyAppTheme" />
+        <activity
+            android:name=".CreateGroupTopicActivity"
+            android:configChanges="orientation|keyboardHidden|navigation"
+            android:screenOrientation="portrait"
+            android:theme="@style/MyAppTheme" />
+        <!-- 邀请朋友.InviteFriendActivity -->
+        <activity
+            android:name=".InviteFriendActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/MyAppTheme"
+            android:windowSoftInputMode="adjustResize" />
+        <!-- 选择朋友圈.ChooseGroupsDialogActivity -->
+        <activity
+            android:name=".ChooseGroupsDialogActivity"
+            android:colorForeground="#00000000"
+            android:screenOrientation="portrait"
+            android:theme="@style/DialogTheme"
+            android:windowSoftInputMode="stateHidden|adjustPan|adjustResize" />
+        <!-- 文件浏览.FileBrowserActivity -->
+        <activity
+            android:name=".FileBrowserActivity"
+            android:screenOrientation="portrait" />
+        <!-- 朋友圈.FriendGroupActivity -->
+        <activity
+            android:name=".FriendGroupActivity"
+            android:configChanges="orientation|keyboardHidden|navigation"
+            android:screenOrientation="portrait"
+            android:theme="@style/MyAppTheme"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+        <activity
+            android:name=".GroupFriendActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/MyAppTheme" />
+        <!-- 分享.SharedBlogActivity -->
+        <activity
+            android:name=".GroupLeaguerChooseActivity"
+            android:configChanges="orientation|keyboardHidden|navigation"
+            android:screenOrientation="portrait"
+            android:theme="@style/MyAppTheme"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+        <!-- 分享.ChatGroupChooseActivity -->
+        <activity
+            android:name=".ChatGroupChooseActivity"
+            android:configChanges="orientation|keyboardHidden|navigation"
+            android:screenOrientation="portrait"
+            android:theme="@style/MyAppTheme"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+        <!-- 一键分享.ShareOtherAppActivity -->
+        <activity
+            android:name=".ShareOtherAppActivity"
+            android:configChanges="orientation|keyboardHidden|navigation"
+            android:screenOrientation="portrait"
+            android:theme="@style/MyAppTheme"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+        <!-- 分享到微信.wxapi.WXEntryActivity android:theme="@android:style/Theme.Dialog" -->
+        <activity
+            android:name=".wxapi.WXEntryActivity"
+            android:colorForeground="#00000000"
+            android:exported="true"
+            android:label="分享到微信"
+            android:launchMode="singleInstance"
+            android:screenOrientation="portrait"
+            android:theme="@style/DialogTheme" />
+        <!-- 个人圈博列表.PersonBlogByGroupActivity -->
+        <activity
+            android:name=".PersonBlogByGroupActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/MyAppTheme" />
+        <!-- 圈子信息编辑.CircleEditorActivity -->
+        <activity
+            android:name=".CircleEditorActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/MyAppTheme" />
+        <!-- 个人信息编辑.PiEditorActivity -->
+        <activity
+            android:name=".PiEditorActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/MyAppTheme" />
+        <!-- 接收推荐.ReceiveRecommendActivity -->
+        <activity
+            android:name=".ReceiveRecommendActivity"
+            android:colorForeground="#ffffff"
+            android:screenOrientation="portrait"
+            android:theme="@style/DialogTheme" />
+        <!-- 编辑.EditActivity -->
+        <activity
+            android:name=".EditActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/MyAppTheme"
+            android:windowSoftInputMode="adjustResize" />
+        <!-- 个人文件.FileListActivity -->
+        <activity
+            android:name=".FileListActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+        <!-- 个人信息.PerInformationActivity -->
+        <activity
+            android:name=".PerInformationActivity"
+            android:configChanges="orientation|keyboardHidden|navigation"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+        <!-- 个人地盘访客.VisitorListActivity -->
+        <activity
+            android:name=".VisitorListActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+        <!-- 图库.ImgGridActivity -->
+        <activity
+            android:name=".ImgGridActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+        <!-- 心情.MoodListActivity -->
+        <activity
+            android:name=".MoodListActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+        <!-- 留言.LeaveMsgActivity -->
+        <activity
+            android:name=".LeaveMsgActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+
+        <!-- 修改密码.ResetPasswordActivity -->
+        <activity
+            android:name=".ResetPasswordActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/MyAppTheme" />
+        <!-- 扫描二维码下载.TwoDimCodeActivity -->
+        <activity
+            android:name=".TwoDimCodeActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/MyAppTheme"
+            android:windowSoftInputMode="stateHidden" />
+        <!-- 欢迎页设置.WelSettingActivity -->
+        <activity
+            android:name=".WelSettingActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/MyAppTheme"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+        <!-- 关于优优工作圈.AboutActivity -->
+        <activity
+            android:name=".AboutActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/MyAppTheme"
+            android:windowSoftInputMode="stateHidden" />
+        <!-- 圈人.SquareManActivity -->
+        <activity
+            android:name=".SquareManActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/MyAppTheme" />
+        <!-- 通过手机号码圈人.PhoneActivity -->
+        <activity
+            android:name=".PhoneActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/MyAppTheme" />
+        <!-- 通过朋友Id圈人.FriendsIdActivity -->
+        <activity
+            android:name=".FriendsIdActivity"
+            android:configChanges="orientation|keyboardHidden|navigation"
+            android:screenOrientation="portrait"
+            android:theme="@style/MyAppTheme"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+        <!-- 圈聊成员.GroupChatActivity -->
+        <activity
+            android:name="GroupChatActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/MyAppTheme" />
+        <!-- 邀请成员到圈聊.InviteLeaguerEnterGroupChatActivity -->
+        <activity
+            android:name=".InviteLeaguerEnterGroupChatActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/MyAppTheme" />
+        <!-- 相册.ImageBucketActivity -->
+        <activity
+            android:name=".ImageBucketActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/MyAppTheme" />
+        <!-- 相册文件夹.ImageChooseActivity -->
+        <activity
+            android:name=".ImageChooseActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/MyAppTheme" />
+        <!-- 专题详情.DisstertationInfoActivity -->
+        <activity
+            android:name=".DissertationInfoActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/MyAppTheme" />
+
+        <service
+            android:name="com.datacomo.mc.spider.android.service.NotificationService"
+            android:exported="false"
+            android:process=":remote" >
+            <intent-filter>
+                <action android:name="com.datacomo.mc.spider.android.service.NotificationService" />
+            </intent-filter>
+        </service>
+        <service
+            android:name="com.baidu.location.f"
+            android:enabled="true"
+            android:process=":remote" />
+
+        <!-- 启动service广播,开机启动广播 -->
+        <receiver
+            android:name="com.datacomo.mc.spider.android.receiver.BootBroadcastReceiver"
+            android:priority="1000" >
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+            </intent-filter>
+        </receiver>
+        <receiver
+            android:name="com.datacomo.mc.spider.android.receiver.NetStateReceiver"
+            android:priority="1000" >
+            <intent-filter>
+                <action android:name="android.net.conn.CONNECTIVITY_CHANGE" />
+            </intent-filter>
+        </receiver>
+
+        <!-- 使用测试包 -->
+        <uses-library android:name="android.test.runner" />
+        <!-- 友盟统计@string/umeng_appkey -->
+        <meta-data
+            android:name="UMENG_APPKEY"
+            android:value="@string/umeng_appkey" />
+    </application>
+
+</manifest>

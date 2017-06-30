@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/circleblogdetails_layout"
+    android:layout_width="wrap_content"
+    android:layout_height="fill_parent"
+    android:background="@drawable/bg_main_white"
+    android:orientation="vertical" >
+
+    <com.datacomo.mc.spider.android.view.RefreshListView
+        android:id="@+id/circleblogdetails_list"
+        style="@style/listviewStyle"
+        android:layout_weight="1"
+        android:background="@color/white"
+        android:fadingEdge="none"
+        android:fastScrollEnabled="true" />
+
+    <include layout="@layout/form_comment" />
+
+    <com.datacomo.mc.spider.android.view.FacesView
+        android:id="@+id/facesview"
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/face_heigh"
+        android:visibility="gone" />
+
+</LinearLayout>

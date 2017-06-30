@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="48dp" >
+
+    <ImageView
+        android:id="@+id/item_file_chooser_iv_check"
+        android:layout_width="32dp"
+        android:layout_height="32dp"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="8dp"
+        android:padding="8dp"
+        android:scaleType="centerInside" />
+
+    
+    <ImageView
+        android:id="@+id/item_file_chooser_iv_icon"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_toRightOf="@id/item_file_chooser_iv_check"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:padding="8dp"
+        android:src="@drawable/icon_image_loading" />
+
+    <TextView
+        android:id="@+id/item_file_chooser_tv_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:layout_toRightOf="@+id/item_file_chooser_iv_icon"
+        android:singleLine="true"
+        android:text="TextView"
+        android:textColor="@color/black"
+        android:textSize="14dp" />
+
+    <TextView
+        android:id="@+id/item_file_chooser_tv_size"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/item_file_chooser_tv_name"
+        android:layout_marginTop="4dp"
+        android:layout_toRightOf="@id/item_file_chooser_iv_icon"
+        android:text="TextView"
+        android:textSize="12dp" />
+
+</RelativeLayout>

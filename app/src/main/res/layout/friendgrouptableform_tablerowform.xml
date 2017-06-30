@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:paddingLeft="5dp"
+    android:paddingRight="5dp"
+    android:paddingTop="5dp" >
+
+    <LinearLayout
+        android:id="@+id/friendgrouptableform_tablerowform_row1"
+        android:layout_width="80.0dp"
+        android:layout_height="80.0dp"
+        android:layout_marginRight="13.3dp"
+        android:background="@drawable/bg_friendtable_row"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:visibility="visible" >
+
+        <LinearLayout
+            android:id="@+id/friendgrouptableform_tablerowform_row1_bg"
+            android:layout_width="65.0dp"
+            android:layout_height="65.0dp"
+            android:background="@drawable/bg_color_green"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:visibility="visible" >
+
+            <TextView
+                android:id="@+id/friendgrouptableform_tablerowform_row1_txt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:maxLines="2"
+                android:padding="3dp"
+                android:textColor="@color/black"
+                android:textSize="16dp" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/friendgrouptableform_tablerowform_row2"
+        android:layout_width="80.0dp"
+        android:layout_height="80.0dp"
+        android:layout_marginLeft="13.3dp"
+        android:layout_marginRight="13.3dp"
+        android:background="@drawable/bg_friendtable_row"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:visibility="visible" >
+
+        <LinearLayout
+            android:id="@+id/friendgrouptableform_tablerowform_row2_bg"
+            android:layout_width="65.0dp"
+            android:layout_height="65.0dp"
+            android:background="@drawable/bg_color_green"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:visibility="visible" >
+
+            <TextView
+                android:id="@+id/friendgrouptableform_tablerowform_row2_txt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:maxLines="2"
+                android:padding="3dp"
+                android:textColor="@color/black"
+                android:textSize="16dp" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/friendgrouptableform_tablerowform_row3"
+        android:layout_width="80.0dp"
+        android:layout_height="80.0dp"
+        android:layout_marginLeft="13.3dp"
+        android:background="@drawable/bg_friendtable_row"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:visibility="visible" >
+
+        <LinearLayout
+            android:id="@+id/friendgrouptableform_tablerowform_row3_bg"
+            android:layout_width="65.0dp"
+            android:layout_height="65.0dp"
+            android:background="@drawable/bg_color_green"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:visibility="visible" >
+
+            <TextView
+                android:id="@+id/friendgrouptableform_tablerowform_row3_txt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:maxLines="2"
+                android:padding="3dp"
+                android:textColor="@color/black"
+                android:textSize="16dp" />
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>

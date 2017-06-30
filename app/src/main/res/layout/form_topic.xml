@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <EditText
+        android:id="@+id/form_topic_edit_title"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+      android:background="@color/transparent"
+        android:hint="标题（可不写）"
+        android:imeOptions="actionDone"
+        android:maxLength="50"
+        android:minHeight="18dp"
+        android:textSize="16dp" >
+
+        <requestFocus />
+    </EditText>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginBottom="3dp"
+        android:layout_marginTop="3dp"
+        android:background="#d2d2d2"
+        android:orientation="vertical" >
+
+    </LinearLayout>
+
+    <EditText
+        android:id="@+id/form_topic_edit_content"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="5dp"
+        android:background="@color/transparent"
+        android:gravity="top"
+        android:hint="内容"
+        android:imeOptions="actionDone"
+        android:minLines="5"
+        android:textSize="15dp" />
+
+    <ViewStub
+        android:id="@+id/form_topic_vs_imagegrid"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout="@+layout/form_imagegrid" />
+
+</LinearLayout>

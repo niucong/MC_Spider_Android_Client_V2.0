@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent" >
+
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="45dp"
+        android:fadingEdge="none" >
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="0dp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:layout_marginTop="5dp"
+                android:layout_weight="1"
+                android:orientation="vertical" >
+
+                <EditText
+                    android:id="@+id/t_title"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="5dp"
+                    android:layout_marginTop="5dp"
+                    android:background="#00000000"
+                    android:hint="标题"
+                    android:maxLength="50"
+                    android:padding="5dp"
+                    android:singleLine="true"
+                    android:textColor="@color/graytext"
+                    android:textSize="16dp" />
+
+                <View
+                    android:id="@+id/t_div"
+                    android:layout_width="fill_parent"
+                    android:layout_height="1dp"
+                    android:background="#e2e2e2" />
+
+                <EditText
+                    android:id="@+id/t_content"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:background="#00000000"
+                    android:gravity="top"
+                    android:hint="内容"
+                    android:minLines="4"
+                    android:padding="5dp"
+                    android:textColor="@color/graytext"
+                    android:textSize="16dp" />
+            </LinearLayout>
+
+            <ViewStub
+                android:id="@+id/note_create_imagegrid"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:layout="@+layout/form_imagegrid" />
+
+            <ViewStub
+                android:id="@+id/note_create_filelist"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout="@+layout/form_filelist" />
+        </LinearLayout>
+    </ScrollView>
+
+    <View
+        android:layout_width="fill_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1" />
+
+    <LinearLayout
+        android:id="@+id/note_create_add"
+        android:layout_width="fill_parent"
+        android:layout_height="45dp"
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/bar_gray_dark"
+        android:gravity="center_vertical"
+        android:orientation="horizontal" >
+
+        <ImageView
+            android:id="@+id/note_create_xiangji"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:layout_margin="5dp"
+            android:layout_weight="1"
+            android:src="@drawable/note_xiangji" />
+
+        <ImageView
+            android:id="@+id/note_create_wenb"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:layout_margin="5dp"
+            android:layout_weight="1"
+            android:src="@drawable/note_wenb" />
+
+        <ImageView
+            android:id="@+id/note_create_huat"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:layout_margin="5dp"
+            android:layout_weight="1"
+            android:src="@drawable/note_huat" />
+
+        <ImageView
+            android:id="@+id/note_create_lux"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:layout_margin="5dp"
+            android:layout_weight="1"
+            android:src="@drawable/note_lux" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/note_create_luyin"
+        android:layout_width="fill_parent"
+        android:layout_height="45dp"
+        android:layout_alignParentBottom="true"
+        android:background="@color/white"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:visibility="gone" >
+
+        <ImageView
+            android:id="@+id/note_create_luyinj"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:src="@drawable/note_luyinz" />
+
+        <TextView
+            android:id="@+id/note_create_time"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center_horizontal"
+            android:text="00:00"
+            android:textSize="20dp" />
+
+        <ImageView
+            android:id="@+id/note_create_wanc"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:src="@drawable/note_wanc" />
+    </LinearLayout>
+
+</RelativeLayout>

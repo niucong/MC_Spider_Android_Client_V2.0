@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/outlinear"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical" >
+
+    <include
+        android:id="@+id/tabs"
+        layout="@layout/layout_tabs" />
+
+    <com.datacomo.mc.spider.android.view.SearchBar
+        android:id="@+id/search_bar"
+        android:visibility="gone"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" >
+
+        <GridView
+            android:id="@+id/table"
+            android:layout_width="fill_parent"
+            android:layout_height="265dp"
+            android:layout_alignParentBottom="true"
+            android:listSelector="@drawable/nothing"
+            android:numColumns="5"
+            android:stretchMode="columnWidth"
+            android:visibility="gone" >
+        </GridView>
+
+        <com.datacomo.mc.spider.android.view.RefreshListView
+            android:id="@+id/listview"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_above="@id/table"
+            android:layout_marginTop="5dp"
+            android:background="@color/transparent"
+            android:cacheColorHint="@color/transparent"
+            android:fadingEdge="none" />
+    </RelativeLayout>
+
+</LinearLayout>

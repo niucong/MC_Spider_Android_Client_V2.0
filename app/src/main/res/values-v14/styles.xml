@@ -1,0 +1,29 @@
+<resources>
+
+    <!--
+        Base application theme for API 14+. This theme completely replaces
+        AppBaseTheme from BOTH res/values/styles.xml and
+        res/values-v11/styles.xml on API 14+ devices.
+    -->
+    <style name="AppBaseTheme" parent="android:Theme.Holo.Light.DarkActionBar">
+        <!-- API 14 theme customizations can go here. -->
+    </style>
+
+    <style name="MyAppTheme" parent="Theme.Sherlock.Light.DarkActionBar">
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="actionBarStyle">@style/Theme.MyTheme.ActionBar</item>
+        <item name="android:actionBarStyle">@style/Theme.MyTheme.ActionBar</item>
+        <item name="android:actionDropDownStyle">@style/MyDropDownNav</item>
+        <item name="android:dropDownListViewStyle">@style/MyDropDownListView</item>
+        <item name="android:homeAsUpIndicator">@drawable/action_back</item>
+        <item name="homeAsUpIndicator">@drawable/action_back</item>
+    </style>
+
+    <style name="Theme.MyTheme.ActionBar" parent="Widget.Sherlock.ActionBar">
+        <item name="android:windowBackground">@drawable/bg_translucent</item>
+        <item name="background">#00000000</item>
+        <item name="android:titleTextStyle">@style/Theme.MyTheme.ActionBar.TitleTextStyle</item>
+        <item name="titleTextStyle">@style/Theme.MyTheme.ActionBar.TitleTextStyle</item>
+    </style>
+
+</resources>

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical" >
+
+    <TextView
+        android:id="@+id/item_popmenu_tv_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:background="#00000000"
+        android:gravity="center_vertical"
+        android:paddingLeft="5dp"
+        android:layout_margin="5dp"
+        android:textColor="@color/white"
+        android:textSize="16dp" />
+
+    <View
+        android:id="@+id/item_popmenu_llayout_line"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@drawable/photobar_line" />
+
+</LinearLayout>

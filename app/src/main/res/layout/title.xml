@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="50dp"
+    android:background="#FF68C02D"
+    android:gravity="center_vertical" >
+
+    <TextView
+        android:id="@+id/title_menu"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:drawableLeft="@drawable/menu_icon"
+        android:gravity="center_vertical"
+        android:text="优优工作圈"
+        android:textColor="#ffffff"
+        android:textSize="21dp" />
+
+    <View
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1" />
+
+    <ImageView
+        android:id="@+id/title_message"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:src="@drawable/message" />
+
+    <ImageView
+        android:id="@+id/title_write"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:src="@drawable/action_write" />
+
+    <RelativeLayout
+        android:layout_width="50dp"
+        android:layout_height="wrap_content" >
+
+        <ImageView
+            android:id="@+id/title_refresh"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:src="@drawable/action_refresh" />
+
+        <ProgressBar
+            android:id="@+id/title_progress"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_centerInParent="true"
+            style="?indeterminateProgressStyle"
+            android:visibility="gone" />
+    </RelativeLayout>
+
+</LinearLayout>

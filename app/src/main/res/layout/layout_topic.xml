@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/bg_main_white"
+    android:orientation="vertical" >
+
+    <FrameLayout
+        android:id="@+id/topic_layout"
+        android:layout_marginTop="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+    
+    <TextView
+        android:id="@+id/numOfQuubo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="5dp"
+        android:layout_below="@id/topic_layout"
+        android:textColor="@color/graytext"
+        android:gravity="center"  />
+
+    <com.datacomo.mc.spider.android.view.RefreshListView
+        android:id="@+id/listview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/numOfQuubo"
+        android:background="@color/transparent"
+        android:cacheColorHint="#00000000"
+        android:fadingEdge="none" />
+    
+    <TextView
+        android:id="@+id/focus"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:padding="5dp"
+        android:layout_alignParentRight="true"
+        android:layout_alignTop="@id/topic_layout"
+        android:layout_marginTop="5dp"
+        android:gravity="center"  />
+
+</RelativeLayout>

@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:paddingLeft="10dp"
+    android:paddingRight="10dp" >
+
+    <include
+        android:id="@+id/item_head_layout"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginBottom="10dp"
+        android:layout_marginTop="10dp"
+        layout="@layout/img_head" />
+
+    <RelativeLayout
+        android:id="@+id/groupbox"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp" >
+
+        <View
+            android:layout_width="3dp"
+            android:layout_height="match_parent"
+            android:layout_centerHorizontal="true"
+            android:background="@drawable/line_gray_v" />
+
+        <ImageView
+            android:id="@+id/group_img"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:layout_marginTop="11dp"
+            android:background="@drawable/white_circle"
+            android:padding="5dp"
+            android:scaleType="fitCenter" />
+
+        <ImageView
+            android:id="@+id/group_no"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:layout_marginTop="11dp"
+            android:padding="9dp"
+            android:scaleType="fitCenter"
+            android:src="@drawable/group_no"
+            android:visibility="gone" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/details"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:layout_marginTop="10dp"
+        android:orientation="vertical" >
+
+        <LinearLayout
+            android:id="@+id/res"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <com.datacomo.mc.spider.android.view.MixedTextView
+                android:id="@+id/respond"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:lineSpacingExtra="3dp"
+                android:textColor="@color/black"
+                android:textSize="14dp" />
+
+            <LinearLayout
+                android:id="@+id/base_title"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:id="@+id/time"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/gray_light"
+                    android:textSize="11dp" />
+
+                <TextView
+                    android:id="@+id/from"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:textColor="@color/gray_light"
+                    android:textSize="11dp" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <include
+            android:id="@+id/ori"
+            layout="@layout/ori_info" />
+    </LinearLayout>
+
+</LinearLayout>

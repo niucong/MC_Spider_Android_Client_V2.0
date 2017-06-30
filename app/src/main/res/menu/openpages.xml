@@ -1,0 +1,26 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android" >
+
+    <item
+        android:id="@+id/action_message"
+        android:icon="@drawable/message"
+        android:showAsAction="always"
+        android:title="消息"
+        android:visible="false"/>
+    <item
+        android:id="@+id/action_write"
+        android:icon="@drawable/action_write"
+        android:showAsAction="always"
+        android:title="快速发布"
+        android:visible="false"/>
+    <item
+        android:id="@+id/action_openpages"
+        android:icon="@drawable/action_openpages_1"
+        android:showAsAction="always"
+        android:title="切换"/>
+    <item
+        android:id="@+id/action_refresh"
+        android:icon="@drawable/action_refresh"
+        android:showAsAction="always"
+        android:title="刷新"/>
+
+</menu>

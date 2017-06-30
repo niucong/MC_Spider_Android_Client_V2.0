@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:background="@null"
+    android:orientation="horizontal"
+    android:padding="10dp" >
+
+    <include
+        android:layout_width="45dp"
+        android:layout_height="45dp"
+        layout="@layout/img_head" />
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:background="@null"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingLeft="10dp" >
+
+        <TextView
+            android:id="@+id/name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/black"
+            android:textSize="16dp" />
+
+        <ImageView
+            android:id="@+id/sex"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:scaleType="centerInside"
+            android:src="@drawable/icon_sex_boy" />
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/operate"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:layout_marginRight="17dp"
+        android:scaleType="centerInside"
+        android:text="添加"
+        android:textSize="16dp" />
+
+</LinearLayout>

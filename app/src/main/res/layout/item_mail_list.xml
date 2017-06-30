@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:paddingBottom="5dp"
+    android:paddingTop="5dp" >
+
+    <ImageView
+        android:id="@+id/details"
+        android:layout_width="36dp"
+        android:layout_height="36dp"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:src="@drawable/arrow_rights" />
+
+    <include
+        android:id="@+id/head"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_alignParentLeft="true"
+        android:layout_centerVertical="true"
+        layout="@layout/img_head_tag" />
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="36dp"
+        android:layout_toRightOf="@id/head" >
+
+        <TextView
+            android:id="@+id/time"
+            style="@style/list_item_date"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentTop="true" />
+
+        <TextView
+            android:id="@+id/name"
+            style="@style/list_item_from"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true" />
+
+        <ImageView
+            android:id="@+id/files"
+            style="@style/mail_list_attach"
+            android:layout_alignParentTop="true"
+            android:layout_marginLeft="2.0dip"
+            android:layout_marginTop="6.0dip"
+            android:layout_toRightOf="@id/name"
+            android:background="@drawable/note_link" />
+
+        <TextView
+            android:id="@+id/mail_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/name"
+            android:ellipsize="end"
+            android:singleLine="true"
+            android:textColor="#626465"
+            android:textSize="14dp" />
+    </RelativeLayout>
+
+</RelativeLayout>

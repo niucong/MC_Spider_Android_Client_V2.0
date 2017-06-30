@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical" >
+
+    <ListView
+        android:id="@+id/memberlistbyblog_membertable_list"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:cacheColorHint="#00000000"
+        android:divider="@drawable/list_divider"
+        android:fastScrollEnabled="true"
+        android:listSelector="@color/transparent"
+        android:visibility="gone" >
+    </ListView>
+
+    <include
+        android:id="@+id/footer"
+        android:layout_marginTop="15dp"
+        layout="@layout/foot" />
+
+</LinearLayout>

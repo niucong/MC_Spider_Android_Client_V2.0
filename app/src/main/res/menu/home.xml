@@ -1,0 +1,28 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android" >
+
+    <item
+        android:id="@+id/action_refresh"
+        android:icon="@drawable/action_refresh"
+        android:showAsAction="always"
+        android:title="刷新"
+        android:visible="false"/>
+    <item
+        android:id="@+id/action_write"
+        android:icon="@drawable/action_write"
+        android:showAsAction="always"
+        android:title="快速发布"
+        android:visible="false"/>
+    <item
+        android:id="@+id/action_more"
+        android:icon="@drawable/action_more"
+        android:showAsAction="always"
+        android:title="更多"
+        android:visible="false"/>
+    <item
+        android:id="@+id/action_write_mood"
+        android:icon="@drawable/title_edit_mood"
+        android:showAsAction="always"
+        android:title="留言"
+        android:visible="false"/>
+
+</menu>

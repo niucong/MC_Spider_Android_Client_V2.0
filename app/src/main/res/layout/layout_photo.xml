@@ -1,0 +1,203 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="#000000"
+    android:visibility="visible" >
+
+    <com.datacomo.mc.spider.android.view.GalleryViewPager
+        android:id="@+id/layout_photo_gallery"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:background="@color/transparent" />
+
+    <LinearLayout
+        android:id="@+id/layout_photo_llayout_title"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:orientation="vertical" >
+
+        <RelativeLayout
+            android:id="@+id/layout_photo_rlayout_title"
+            android:layout_width="fill_parent"
+            android:layout_height="45dp"
+            android:background="@drawable/photobar_bg" >
+
+            <LinearLayout
+                android:id="@+id/layout_photo_title_llayout_titlebox"
+                android:layout_width="fill_parent"
+                android:layout_height="match_parent"
+                android:gravity="center_vertical"
+                android:visibility="visible" >
+
+                <ImageView
+                    android:id="@+id/left"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="5dp"
+                    android:paddingBottom="13dp"
+                    android:paddingTop="13dp"
+                    android:src="@drawable/btn_recurrence" />
+
+                <TextView
+                    android:id="@+id/layout_photo_txt_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:drawableLeft="@drawable/photobar_topline"
+                    android:drawablePadding="15dp"
+                    android:gravity="center_vertical"
+                    android:singleLine="true"
+                    android:textColor="@color/white"
+                    android:textSize="18dp" />
+
+                <TextView
+                    android:id="@+id/layout_photo_txt_index"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:paddingLeft="15dp"
+                    android:paddingRight="15dp"
+                    android:textColor="@color/white"
+                    android:textSize="15dp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/layout_photo_title_llayout_commentitlebox"
+                android:layout_width="fill_parent"
+                android:layout_height="match_parent"
+                android:gravity="center_vertical"
+                android:visibility="gone" >
+
+                <ImageView
+                    android:id="@+id/layout_photo_title_commenttitle_iv_left"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_marginLeft="5dp"
+                    android:paddingBottom="10dp"
+                    android:paddingTop="10dp"
+                    android:src="@drawable/btn_content_undo" />
+
+                <TextView
+                    android:id="@+id/TextView02"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:drawableLeft="@drawable/photobar_topline"
+                    android:drawablePadding="5dp"
+                    android:gravity="center_vertical"
+                    android:singleLine="true"
+                    android:text="评论"
+                    android:textSize="18dp" />
+
+                <TextView
+                    android:id="@+id/layout_photo_title_commenttitle_tv_commentnum"
+                    android:layout_width="wrap_content"
+                    android:layout_height="30dp"
+                    android:layout_marginRight="8dp"
+                    android:background="@drawable/btn_mail"
+                    android:drawablePadding="5dp"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="8dp"
+                    android:text="0"
+                    android:textSize="15dp" />
+            </LinearLayout>
+        </RelativeLayout>
+
+        <LinearLayout
+            android:id="@+id/LinearLayout03"
+            android:layout_width="fill_parent"
+            android:layout_height="1dp"
+            android:background="@drawable/photobar_line"
+            android:orientation="vertical" >
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/layout_photo_llayout_menubox"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:orientation="vertical" >
+
+        <LinearLayout
+            android:id="@+id/LinearLayout01"
+            android:layout_width="fill_parent"
+            android:layout_height="1dp"
+            android:background="@drawable/photobar_line"
+            android:orientation="vertical" >
+        </LinearLayout>
+
+        <RelativeLayout
+            android:id="@+id/layout_photo_rlayout_menubox"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/photobar_bg" >
+
+            <LinearLayout
+                android:id="@+id/layout_photo_menubox_llayout_commentbottombox"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:orientation="vertical"
+                android:visibility="gone" >
+
+                <include layout="@layout/form_comment" />
+
+                <com.datacomo.mc.spider.android.view.FacesView
+                    android:id="@+id/facesview"
+                    android:layout_width="fill_parent"
+                    android:layout_height="@dimen/face_heigh"
+                    android:visibility="gone" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/layout_photo_menubox_llayout_menu"
+                android:layout_width="fill_parent"
+                android:layout_height="45dp"
+                android:orientation="horizontal"
+                android:visibility="visible" >
+
+                <ImageView
+                    android:id="@+id/layout_photo_menubox_menu_img_comment"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:paddingBottom="10dp"
+                    android:paddingTop="10dp"
+                    android:src="@drawable/btn_social_chat"
+                    android:visibility="gone" />
+
+                <ImageView
+                    android:id="@+id/layout_photo_menubox_menu_img_share"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:paddingBottom="10dp"
+                    android:paddingTop="10dp"
+                    android:src="@drawable/btn_internet" />
+
+                <ImageView
+                    android:id="@+id/layout_photo_menubox_menu_img_praise"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:paddingBottom="10dp"
+                    android:paddingTop="10dp"
+                    android:src="@drawable/btn_praise"
+                    android:visibility="gone" />
+
+                <ImageView
+                    android:id="@+id/layout_photo_menubox_menu_img_more"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:paddingBottom="10dp"
+                    android:paddingTop="10dp"
+                    android:src="@drawable/btn_more" />
+            </LinearLayout>
+        </RelativeLayout>
+    </LinearLayout>
+
+</RelativeLayout>

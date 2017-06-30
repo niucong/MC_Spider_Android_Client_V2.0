@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="info_wall">动态墙</string>
+    <string name="circleblogdtails_comment_baseinfo_fromtitle">来自：</string>
+    <string name="pdialog_getinfo_title">获取信息</string>
+    <string name="pdialog_getinfo_msg">正在获取信息，请稍后...</string>
+    <string name="circleblogdetails_fileinfo_name"></string>
+    <string name="release_information_selectImgdialog_title">选择照片</string>
+    <string name="selectImgdialog_fromlocality">手机相册</string>
+    <string name="selectImgdialog_fromcamera">相机拍照</string>
+    <string name="selectImgdialog_deleteimg">清除图片</string>
+    <string name="selectImgdialog_cancel">取消</string>
+    <string name="release_information_releasedialog_title">发布信息</string>
+    <string name="release_information_releasedialog_msg">信息发布中，请稍后...</string>
+    <string name="release_information_releaseinfonull">信息内容不能为空</string>
+    <string name="release_information_releasebtn">发 布</string>
+    <string name="release_information_releaseinfotxt_hint">发表一下你想说的吧</string>
+    <string name="comment_success">评论成功</string>
+    <string name="find_password">点击确定您将收到包含密码信息的系统短信,请妥善保管\n</string>
+    <string name="find_password_prompt">点击确定将产生短信上行，优优工作圈不收取任何费用，仅需支付由运营商收取的标准短息费。</string>
+    <string name="regist_failed">邮箱或密码为空，请重新输入。</string>
+    <string name="find_pwd_btn"><u>忘记密码？</u></string>
+    <string name="registe_hint_mail">邮箱</string>
+    <string name="registe_hint_password">密码 6-16位英文与数字组合</string>
+    <string name="hint_repassword">6-16位英文与数字组合</string>
+    <string name="registe_hint_phone">手机号</string>
+    <string name="registe_hint_code">短信验证码</string>
+    <string name="registe_login">		已有账户？
+<u>点击此登录</u></string>
+    <string name="circleblogdetails_buttommenu_sharetofriend">分 享</string>
+    <string name="circleblogdetails_buttommenu_sharedbyonekey">第三方分享</string>
+    <string name="circleblogdetails_buttommenu_sharedtocircle">转发到交流圈</string>
+    <string name="circleblogdetails_buttommenu_edit">编 辑</string>
+    <string name="circleblogdetails_buttommenu_delete">删 除</string>
+    <string name="praiseresource_succeed">您觉得赞！</string>
+    <string name="cancel">取 消</string>
+    <string name="title_circleblog">圈博详情</string>
+    <string name="title_note">云笔记</string>
+    <string name="title_friend">朋友圈</string>
+    <string name="imgdetails_header_title_txt">0/0</string>
+    <string name="imgdetails_shared">分 享</string>
+    <string name="imgdetails_download">下载原图</string>
+    <string name="memberlistbyblog_buttommenu_phone">拨打</string>
+    <string name="memberlistbyblog_buttommenu_call">打招呼</string>
+    <string name="memberlistbyblog_buttommenu_message">发秘信</string>
+    <string name="memberlistbyblog_buttommenu_topersonalpage">去TA主页</string>
+    <string name="memberlistbyblog_buttommenu_title">马上与某某联系吧</string>
+    <string name="memberlistbyblog_buttommenu_title_head">马上与</string>
+    <string name="memberlistbyblog_buttommenu_title_foot">联系吧</string>
+    <string name="circleblogdetails_fileinfo_size">0.0</string>
+    <string name="shared">分 享</string>
+    <string name="transmit">转 发</string>
+    <string name="transmit_succeed">已转发</string>
+    <string name="returntogroup">回圈子</string>
+    <string name="haspraise">您已经赞过</string>
+    <string name="searchLabel">查 询</string>
+    <string name="searchHint">输入圈子名</string>
+    <string name="deleteresource_succeed">已删除</string>
+    <string name="collectresource_succeed">已收藏</string>
+    <string name="collectresource_cancel_succeed">已取消收藏</string>
+    <string name="nohasdeletepermission">您不是该资源的创作者，无法删除该资源</string>
+    <string name="title_groupleaguer">成员</string>
+    <string name="fileformaterror">格式错误，请重新选择</string>
+    <string name="personinfo_uploadimgdialog_confirmupload">您当前操作将修改您的头像，请选择</string>
+    <string name="circle_uploadimgdialog_title">修改圈子海报</string>
+    <string name="circle_uploadimgdialog_confirmupload">您当前操作将修改该圈子的海报，请选择</string>
+    <string name="alertdialog_cancel">取 消</string>
+    <string name="alertdialog_confirm">确 定</string>
+    <string name="personinfo_uploadimgdialog_msg">头像修改中，请稍后...</string>
+    <string name="allselect">全     选</string>
+    <string name="news_detail_lable_pub">发布于</string>
+    <string name="sharedblog_submit">确 定</string>
+    <string name="setting_title">本设置对来自带有“V”标识的圈子的提醒无效，且此类圈子的短
+	信提醒使用圈子账户的圈币。</string>
+    <string name="setting_remind">客户端通知提醒</string>
+    <string name="setting_remind_way">提醒方式</string>
+    <string name="setting_text_way">若您要关闭或开启客户端通知提醒，请在“设置” - “通知”功已开启能中，找到应用程序“优优工作圈”进行更改。</string>
+    <string name="setting_message_way">手机短信提醒</string>
+    <string name="setting_way_type">提醒类型</string>
+    <string name="setting_way_time">提醒接收时段</string>
+    <string name="setting_way_text">优优工作圈只在您设定的时间段内提醒您。</string>
+    <string name="setting_clear">清除缓存</string>
+    <string name="copy_right">www.yuuquu.com</string>
+    <string name="limits">您没有该权限，请先加入！</string>
+    <string name="downloading">正在下载</string>
+    <string name="umeng_appkey">520334ea56240b0e780067f7</string>
+
+    <item name="tag_first" type="id"></item>
+    <item name="tag_second" type="id"></item>
+
+    <string-array name="member_titles">
+        <item>动态</item>
+        <item>文件</item>
+        <item>图片</item>
+        <item>个人信息</item>
+        <item>访客</item>
+        <item>心情</item>
+        <item>留言</item>
+    </string-array>
+
+</resources>
